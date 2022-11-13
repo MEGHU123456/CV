@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <script>
+            class Person{
+                constructor(){
+                    this.name=name;
+                }
+                details(){
+                    document.write("Name : "+this.name);
+                }
+            }
+            class Student extends Person{
+                constructor(name,rno,marks){
+                    super(name);
+                    this.rno=rno;
+                    this.marks=marks;
+                }
+                details(){
+                   // document.write("Roll No: "+this.rno);
+                   document.write(`Roll No: ${this.rno}<br>Name : ${this.name}<br>Marks: ${this.marks}<br>`)
+                }
+            }
+            class Employee extends Person{
+                constructor(name,empId,salary){
+                    super(name);
+                    this.empId=empId;
+                    this.salary=salary;
+                }
+                details(){
+                   // document.write("Roll No: "+this.rno);
+                   document.write(`empID : ${this.empId}<br>Name : ${this.name}<br>Salary: ${this.salary}<br>`)
+                }
+            }
+            const a=new Student("sd",12,23);
+            document.write("Student Details<br>");
+            a.details();
+            const emp=new Employee("william",12,45000);
+            document.write("Employee Details<br>");
+            emp.details();
+        </script>
+    </body>
+</html>

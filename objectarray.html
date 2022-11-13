@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+             //object instance
+             var emp1=new Object();
+               emp1.id=102;
+               emp1.name="John";
+               emp1.salary=28500;
+               document.write(emp1.id+"<br>"+emp1.name+"<br>"+emp1.salary+'<br>');
+
+               //object literal
+            var emp={id1:101,name1:"Smith",salary1:35000};
+            document.write("EmpId : "+emp.id1+'<br>');
+            document.write("Name : "+emp.name1+'<br>');
+            document.write("Salary : "+emp.salary1+'<br>');
+
+            //object constructor
+            function empl(id2,name2,salary2){
+            this.id2=id2;
+            this.name2=name2;
+            this.salary2=salary2;
+            }
+            var emp2=new empl(103,"Mike",36000);
+            document.write("EmpId : "+emp2.id2+'<br>');
+            document.write("Name : "+emp2.name2+'<br>');
+            document.write("Salary : "+emp2.salary2+'<br>');
+        </script>
+    </body>
+</html>

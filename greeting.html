@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            var user=prompt("Enter your name");
+            var dt=new Date();
+            var hours=dt.getHours();
+            if(hours<12)
+            document.write("Hi "+user+", Good Morning");
+            else if(hours>=12 && hours<17)
+            document.write("Hi "+user+", Good Afternoon");
+            else if(hours>=17&&hours<20)
+            document.write("Hi "+user+", Good Evening");
+            else
+            document.write("Hi "+user+", Good Night");
+        </script>
+    </body>
+</html>

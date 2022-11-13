@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            function emp(id,name,salary)
+            {
+                this.id=id;
+                this.name=name;
+                this.salary=salary;
+                this.incrementsalary=function(sal){
+                    this.salary+=sal;
+                }
+            }
+            var emp2=new emp(103,"Mike",36000);
+            var emp3=new emp(104,"Mwadeike",37000);
+            document.write("EmpId : "+emp2.id+'<br>');
+            document.write("Name : "+emp2.name+'<br>');
+            document.write("Salary : "+emp2.salary+'<br>');
+            document.write("EmpId : "+emp3.id+'<br>');
+            document.write("Name : "+emp3.name+'<br>');
+            document.write("Salary : "+emp3.salary+'<br>');
+            emp2.incrementsalary(3600);
+            document.write("EmpId : "+emp2.id+'<br>');
+            document.write("Name : "+emp2.name+'<br>');
+            document.write("Salary : "+emp2.salary+'<br>');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            function add(a,b){
+                var c=parseInt(a)+parseInt(b);
+                document.form1.text3.value=c;
+            }
+            function sub(a,b){
+                var c=a-b;
+                document.form1.text3.value=c;
+            }
+            function mul(a,b){
+                var c=a*b;
+                document.form1.text3.value=c;
+            }
+            function div(a,b){
+                var c=a/b;
+                document.form1.text3.value=c;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h3>Simple Calculator</h3><p>
+                <form name="form1">
+                    Num-1: <input type="text" name="text1"><p>
+                    Num-2: <input type="text" name="text2"><p>
+                    Result:<input type="text" name="text3"><p>
+                    <input type="button" name="addButton" value=" + " onclick="add(text1.value,text2.value)">
+                    <input type="button" name="subButton" value=" - " onclick="sub(text1.value,text2.value)">
+                    <input type="button" name="mulButton" value=" * " onclick="mul(text1.value,text2.value)">
+                    <input type="button" name="divButton" value=" / " onclick="div(text1.value,text2.value)">
+                    <input type="reset" value="Reset">
+                </form>
+        </center>
+    </body>
+</html>

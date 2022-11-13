@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <!-- <form>
+            <h1 align="center">PRODUCT DETAILS</h1>
+            category:<select name='Category:' id='choose'>
+                <option > </option>
+                <option value="Electronics"> Electronics</option>
+                <option value="Grocery"> Grocery</option>
+            </select ><br/>
+            Product:<select value="Product:">
+            <optgroup data-rel="Electonics">
+                <option></option>
+                <option>Television</option>
+                <option>Laptop</option>
+                <option>Phone</option>
+            </optgroup> 
+            <optgroup data-rel="Grocery">
+                <option>Powder</option>
+                <option>Soap</option>
+            </optgroup>  
+        </select> <br/>
+        Quantity: <input type="number" id='q' placeholder="Enter the quantity"><br/>
+        Price:<input type="number" id='p' placeholder="Enter the price"><br/>
+        <input type="submit" name="submit">    
+        </form>
+    -->
+    <!-- <script>
+          var e=["Television","Laptop","Phone"];
+          var g=["Powder","Soap"];
+          
+
+          function show(){
+            document.getElementById('prods').innerHTML="";
+            var s=document.getElementById('cat').value;
+            if(s=='Electronics'){
+                for(let i=0;i<e.length;i++)
+                {
+                    var option=document.createElement("option");
+                    option.text=e[i];
+                    document.getElementById('prods').add(option);
+                }
+            }
+            if(s=="Grocery")
+            {
+                for(let i=0;i<g.length;i++)
+                {
+                    var option=document.createElement("option");
+                    option.text=g[i];
+                    document.getElementById('prods').add(option);
+                }
+            }
+          }
+          function tp(a,b){
+        var c=a*b;
+        document.form1.s.value=c;
+        }
+    </script>
+    </head> 
+    <body>
+        
+        <center>
+        <h1 align="center">PRODUCT DETAILS</h1>
+        <form name="form1">
+            category:<select name='Category:' id='cat' onChange="show()">
+                <option > </option>
+                <option value="Electronics"> Electronics</option>
+                <option value="Grocery"> Grocery</option>
+            </select ><br/>
+            Product:<select value="Product:" id="prods"></select><br/>
+                Quantity: <input type="number" name='Quantity' placeholder="Enter the quantity"><br/>
+                Price:<input type="number" name='price' id='p' placeholder="Enter the price"><br/>
+                Total price:<input type="text" name="s" ><br/>
+                <input type="button" name="submit" value="submit" id="x" onclick="tp(Quantity.value,price.value)"> 
+                <input type="reset" name="reset">  
+            </form> 
+            </center>
+    </body>
+</html> -->
+<html>
+    <head>
+        <script>
+            const map=new Map();
+            const map1=new Map();
+
+map.set('Television',15000);
+map.set('Laptop',50000);
+map.set('Phone',40000);
+map1.set('Powder',100);
+map1.set('Soap',300);
+function show(){
+            document.getElementById('prods').innerHTML="";
+            var s=document.getElementById('cat').value;
+            if(s=='Electronics'){
+                for(var i in map.values())
+                {
+                    var option=document.createElement("option");
+                    option.text=map.get(i);
+                    document.getElementById('prods').add(option);
+                }
+            }
+            if(s=="Grocery")
+            {
+                for(var i in map1.values())
+                {
+                    var option=document.createElement("option");
+                    option.text=map.get(i);
+                    document.getElementById('prods').add(option);
+                }
+            }
+          }
+          function tp(a,b){
+            var c=map.get(b)*a;
+            document.form1.s.value=c;
+        }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1 align="center">PRODUCT DETAILS</h1>
+        <form name="form1">
+            category:<select name='Category:' id='cat' onChange="show()">
+                <option > </option>
+                <option value="Electronics"> Electronics</option>
+                <option value="Grocery"> Grocery</option>
+            </select ><br/>
+            Product:<select value="Product:" id="prods"></select><br/>
+                Quantity: <input type="number" name='Quantity' placeholder="Enter the quantity"><br/>
+                Price:<input type="number" name='price' id='p' placeholder="Enter the price"><br/>
+                Total price:<input type="text" name="s" ><br/>
+                <input type="button" name="submit" value="submit" id="x" onclick="tp(Quantity.value,price.value)"> 
+                <input type="reset" name="reset">  
+            </form> 
+            </center>
+    </body>
+</html>

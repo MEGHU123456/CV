@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function ans(p,r,t)
+            {
+                var c=(p*t*r)/100;
+                document.form1.res.value=c;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <form name="form1">
+                Loan Amount : <input type="number" name="la"><br/>
+                Rate : <input type="number" name="r"><br/>
+                Time Period in Years : <input type="number " name="tp"><br/>
+                EMI Amount: <input type="number" name="res" onclick="ans(la.value,r.value,tp.value)"><br/>
+                <input type="button" name="s" value="Calculate" >
+            </form>
+        </center>
+    </body>
+</html>

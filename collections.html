@@ -1,0 +1,55 @@
+<!-- <html>
+    <body>
+        <script>
+          //set
+          const bookSet=new Set();
+
+          bookSet.add('HTML');
+          bookSet.add('CSS');
+          bookSet.add('JavaScript');
+          console.log("No. of elements : "+bookSet.size);//gives the size of collection
+          console.log("css? : "+bookSet.has('CSS'));//searching for an element in the collection
+          bookSet.delete('CSS');//remove a particular element frokm collection
+
+          console.log(bookSet);
+          console.log("css? : "+bookSet.has('CSS'));
+          bookSet.clear();
+          </script>
+    </body>
+    </html> -->
+    <html>
+    <body>
+        <script>
+          //set
+          const map=new Map();
+
+          map.set('markup','HTML');
+          map.set('styling','CSS');
+          map.set('scripting','JavaScript');
+
+          console.log("Map Size : "+map.size);//gives the size of collection
+          console.log("Value of styling is : "+map.get('styling'));
+
+          console.log("keys : "+map.keys());
+          console.log("values : "+map.values());
+          console.log("entries : "+map.entries());
+
+        //   for (var [key, value] of map.entries()) {
+        //      console.log(key + " = " + value);
+        //     }
+
+        // for(var i of map.keys())
+        // console.log(i);
+
+        // for(var i of map.values())
+        // console.log(i);
+
+        // for(var i of map.entries())
+        // console.log(i);
+
+          console.log('markup ? :'+map.has('markup'));
+          map.delete('markup');//remove a particular element from collection
+          console.log('markup ? :'+map.has('markup'));
+          </script>
+    </body>
+    </html>

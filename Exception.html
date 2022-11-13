@@ -1,0 +1,37 @@
+<!-- <html>
+    <body>
+        <script>
+            try{
+                var c=input("Enter your name");
+                alert(c);
+
+            }
+            catch(err)
+            {
+                alert(err.message);
+            }
+        </script>
+    </body>
+</html> 
+ -->
+
+<html>
+    <body>
+        <script>
+            try{
+                var n=prompt("ENter your age");
+                if(n=="")
+                throw "age cannot be empty";
+                if(isNaN(n))
+                throw "input value is not a number";
+                document.write("You are "+n+" years old now");
+            }
+            catch(err){
+                alert(err.message);
+            }
+            finally{
+                document.write("Done");
+            }
+        </script>
+    </body>
+</html>

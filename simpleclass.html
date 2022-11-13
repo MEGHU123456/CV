@@ -1,0 +1,67 @@
+<html>
+    <body>
+        <script>
+            // class Account{
+            //     constructor(id,name,balance){
+            //         this.id=id;
+            //         this.name=name;
+            //         this.balance=balance;
+            //     }
+            //     deposit(amt){
+            //         this.balance+=amt;
+            //     }
+            //     withdraw(amt){
+            //         this.balance-=amt;
+            //     }
+            //     getBalanace(){
+            //         return this.balance;
+            //     }
+            //     details(){
+            //         document.write(`Acc No: ${this.id}<br>Name : ${this.name}<br>Balance : ${this.balance}<br>`);
+            //     }
+            // }
+            
+            // var a=new Account(1022,"meghu",900);
+            // a.deposit(5000);
+            // a.withdraw(5000);
+            // var c=a.getBalanace();
+            // a.details();
+            // document.write("Get balance : "+ c +"<br>");
+            class Account{
+                constructor(id,name,balance){
+                    this.id=id;
+                    this.name=name;
+                    this.balance=balance;
+                }
+                deposit(amt){
+                    this.balance+=amt;
+                }
+                withdraw(amt){
+                    this.balance-=amt;
+                }
+                getBalanace(){
+                    return this.balance;
+                }
+                details(){
+                    document.write(`Acc No: ${this.id}<br>Name : ${this.name}<br>Balance : ${this.balance}<br>`);
+                }
+            }
+            class savings extends Account{
+                withdraw(amt){
+                    if(this.balance-amt<=1000)
+                    document.write(`The minimum balance should be 1000<br>`);
+                    else
+                    {
+                        this.balance-=amt;
+                    }
+                }
+            }
+            var a=new savings(1022,"meghu",2100);
+            a.deposit(5000);
+            var c=a.getBalanace();
+            a.details();
+            document.write("Get balance : "+ c +"<br>");
+            a.withdraw(5000);
+        </script>
+    </body>
+</html>
